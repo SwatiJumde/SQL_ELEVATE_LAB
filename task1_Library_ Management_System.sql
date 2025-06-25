@@ -6,7 +6,7 @@
     State VARCHAR2(50),
    ZipCode VARCHAR2(10)  
  );                                                       
- "Table created"
+-- Table created
 CREATE TABLE BOOK (
 BOOKID INT PRIMARY KEY,
 TITLE VARCHAR(200),
@@ -15,7 +15,7 @@ YEARPUBLISHED INT,
 LIBRARYID INT,
 FOREIGN KEY (LibraryID) REFERENCES Libraries (LibraryID)
 );
- "Table created"
+ --Table created
     CREATE TABLE Members (
     MemberID INT PRIMARY KEY,
     FirstName VARCHAR2(50),
@@ -26,7 +26,7 @@ FOREIGN KEY (LibraryID) REFERENCES Libraries (LibraryID)
     LibraryID INT,
     FOREIGN KEY (LibraryID) REFERENCES Library(LibraryID)
 );
- "Table created"
+ --Table created
 CREATE TABLE Loans (
     LoanID INT PRIMARY KEY,
     BookID INT,
@@ -37,7 +37,7 @@ CREATE TABLE Loans (
     FOREIGN KEY (BookID) REFERENCES Books(BookID),
     FOREIGN KEY (MemberID) REFERENCES Members(MemberID)
 );
- "Table created"
+ --Table created
 CREATE TABLE Staff (
     StaffID INT PRIMARY KEY,
     FullName VARCHAR2(100),
@@ -46,6 +46,6 @@ CREATE TABLE Staff (
     LibraryID INT,
     FOREIGN KEY (LibraryID) REFERENCES Library(LibraryID)    
 );
- "Table created"
+ --Table created
 
 
